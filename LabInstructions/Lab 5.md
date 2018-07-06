@@ -23,7 +23,7 @@
 
 6.  Run the lab-5-sentence-server project.  Refresh Eureka to see it appear in the list.  Test to make sure it works by opening [http://localhost:8020/sentence](http://localhost:8020/sentence).  You should see several random sentences appear.  We will refactor this code to make use of Ribbon.
 
-7.  Stop the lab-5-sentence-server.  Add the org.springframework.cloud / spring-cloud-starter-netflix-ribbon dependency.
+7.  Stop the lab-5-sentence-server.  Add the org.springframework.cloud / spring-cloud-starter-ribbon dependency.
 
 8.  Go to Application.java.  Create a new @Bean method that instantiates and returns a new RestTemplate.  The @Bean method should also be annotated with @LoadBalanced - this will associate the RestTemplate with Ribbon.  Code should look something like this:
 

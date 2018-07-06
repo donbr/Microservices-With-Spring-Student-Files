@@ -8,7 +8,7 @@
   - Boot version 2.0.1 is the most recent at the time of this writing, but you can generally use the latest stable version available.  
   - No need to select any dependencies.
 
-2. Edit the POM (or Gradle) file.  Add a “Dependency Management” section (after `<properties>`, before `<dependencies>`) to identify the spring cloud parent POM.  "Finchley.RELEASE" is the most recent stable version at the time of this writing, but you can use the latest stable version available.  Example:
+2. Edit the POM (or Gradle) file.  Add a “Dependency Management” section (after `<properties>`, before `<dependencies>`) to identify the spring cloud parent POM.  "Dalston.RELEASE" is the most recent stable version at the time of this writing, but you can use the latest stable version available.  Example:
 
 ```
     <dependencyManagement>
@@ -16,7 +16,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Finchley.RELEASE</version>
+                <version>Dalston.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -46,7 +46,7 @@
 
 8. Modify the POM (or Gradle) file.  
   - Add the same dependency management section you inserted into the server POM.  (You could simply change the parent entries, but most clients will probably be ordinary applications with their own parents.)
-  - Add a dependency for group "org.springframework.cloud" and artifact "spring-cloud-starter-netflix-eureka-client".
+  - Add a dependency for group "org.springframework.cloud" and artifact "spring-cloud-starter-eureka".
 
 9. Modify the Application class.  Add @EnableDiscoveryClient.
 

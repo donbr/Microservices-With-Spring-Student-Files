@@ -36,7 +36,7 @@ public class Application {
 		list.add(new Team("Harlem", "Globetrotters", set));
 		list.add(new Team("Washington","Generals",null));
 
-		teamRepository.saveAll(list);
+		teamRepository.save(list);
 	}    
     
 }

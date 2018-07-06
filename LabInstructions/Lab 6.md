@@ -25,7 +25,7 @@
 
 7.  First, take a look at the lab-6-sentence-server project.  It has been refactored a bit from previous examples.  The controller has been simplified to do only web work, the task of assembling the sentence is now in the service layer.  The SentenceService uses @Autowire to reference individual DAO components which have been created to obtain the words from the remote resources.  Since all of the remote resources are structurally the same, there is a fair bit of inheritance in the dao package to make things easy.  But each uses the same Ribbon client technology and RestTemplate used previously.
 
-8.  Open the POM.  Add another dependency for spring-cloud-starter-openfeign.
+8.  Open the POM.  Add another dependency for spring-cloud-starter-feign.
 
 9.  Edit the main Application configuration class and @EnableFeignClients.
 

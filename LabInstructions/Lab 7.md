@@ -25,7 +25,7 @@
 
 7.  First, take a look at the lab-7-sentence-server project.  It has been refactored a bit from previous examples.  There is now a WordService and WordServiceImpl that wraps calls to the Feign clients.  This was mainly done to make the lab instructions easier, so that your code modifications are within one class.
 
-8.  Open the POM.  Add another dependency for spring-cloud-starter-netflix-hystrix.
+8.  Open the POM.  Add another dependency for spring-cloud-starter-hystrix.
 
 9.  Edit the main Application configuration class and @EnableHystrix.
 
@@ -41,7 +41,7 @@
 
   **BONUS - Add Hystrix Dashboard**
 
-14.  Add the Hystrix Dashboard to your sentence server.  Begin by adding the spring-cloud-starter-netflix-hystrix-dashboard dependency.  Next add @EnableHystrixDashboard annotation to your Application configuration class.  Finally add this property to application.* to allow Actuator to expose the Hystrix stream: 
+14.  Add the Hystrix Dashboard to your sentence server.  Begin by adding the spring-cloud-starter-hystrix-dashboard dependency.  Next add @EnableHystrixDashboard annotation to your Application configuration class.  Finally add this property to application.* to allow Actuator to expose the Hystrix stream: 
 
 15.  Restart the sentence server.  Open [http://localhost:8020/hystrix](http://localhost:8020/hystrix).  When prompted, enter http://localhost:8020/actuator/hystrix.stream as the host to monitor.  
 
